@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (max-width: 390px) {
+  /* Custom xs screen */
+  html {
+    @apply text-xs; /* Smaller text for extra small screens */
+  }
+}
+
+@screen lg {
+  @layer base {
+    html {
+      @apply text-base;
+    }
+  }
+}
+
+.backgn-gradient {
+  @apply bg-[#e3e0e2] bg-gradient-to-r from-[#e3e0e2] to-white/5;
+}
