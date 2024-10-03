@@ -20,3 +20,35 @@
 .backgn-gradient {
   @apply bg-[#e3e0e2] bg-gradient-to-r from-[#e3e0e2] to-white/5;
 }
+
+@layer utilities {
+  @media (max-width: 390px) {
+    .custom-translate {
+      @apply translate-x-6;
+    }
+    .mobil-gap {
+      @apply gap-x-[21svw];
+    }
+  }
+
+  @media (min-width: 395px) and (max-width: 490px) {
+    .custom-translate-2 {
+      @apply translate-x-2;
+    }
+    .mobil-gap-2 {
+      @apply gap-x-[15.4svw];
+    }
+  }
+
+  @media (min-width: 490px) and (max-width: 768px) {
+    .custom-translate-3 {
+      @apply translate-x-12;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .custom-translate-4 {
+      @apply translate-x-0;
+    }
+  }
+}

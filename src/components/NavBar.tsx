@@ -52,13 +52,15 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="w-full flex lg:block justify-center sm:justify-between  items-center h-full py-5 lg:px-10 xl:px-44 sm:pl-44  lg:h-12 bg-[#2e77f9] ">
-        <GiHamburgerMenu
-          className="text-white text-5xl rounded-lm lg:hidden block   "
-          onClick={() => setOpenNav(true)}
-        />
-        <ul className="flex flex-col lg:flex-row xs:pl-14  h-full md:items-center  sm:pr-10    lg:justify-between gap-2 lg:gap-0 text-white   ">
-          <li className="font-bold text-lg lg:text-xl ">
+      <div className="w-full flex xs:justify-end  xs:pr-5 justify-center sm:justify-between  items-center h-full py-5  lg:block lg:px-10 xl:px-44 sm:pl-44  lg:h-12 bg-[#2e77f9] ">
+        <div className=" w-[7rem] flex justify-center items-center py-4 z-[20] lg:hidden  ">
+          <GiHamburgerMenu
+            className="text-white text-5xl rounded-lm lg:hidden block     "
+            onClick={() => setOpenNav(true)}
+          />
+        </div>
+        <ul className="flex flex-col lg:flex-row xs:pl-3  h-full md:items-center  sm:pr-10    lg:justify-between gap-2 lg:gap-0 text-white   ">
+          <li className="font-bold text-lg  lg:text-xl ">
             Want to Connect with Us?
           </li>
           <li className="flex flex-col lg:flex-row  gap-2 lg:gap-6 text-xs lg:text-sm font-semibold">
@@ -86,7 +88,7 @@ const NavBar = () => {
         } w-full flex justify-between items-center px-20 lg:py-3 `}
       >
         {/* LOGO */}
-        <Logo className="" />
+        <Logo className="xs:opacity-95" />
         {/* NAV LINKS */}
         <nav className="relative hidden lg:block  ">
           <ul className="flex  w-full relative">

@@ -20,9 +20,9 @@ const Compare = () => {
   };
   return (
     <div className="  flex flex-col  ">
-      <div className="sm:px-5 lg:px-24 2xl:px-14 translate-x-2  overflow-hidden ">
+      <div className="sm:px-5 lg:px-24 2xl:px-14 custom-translate custom-translate-2  overflow-hidden ">
         <div
-          className="flex w-full  2xl:gap-8  transition-transform duration-500 ease-in-out  sm:grid grid-cols-2 xs:gap-x-10    "
+          className="flex w-full  2xl:gap-8  transition-transform duration-500 ease-in-out  sm:grid grid-cols-2   mobil-gap mobil-gap-2  "
           style={{
             transform: `translateX(${translateX}%)`,
             width: `${(COMPARE_PLANS.length / visiblePlans) * 100}

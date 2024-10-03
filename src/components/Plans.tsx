@@ -19,20 +19,20 @@ const Plans = () => {
   const translateX = (activeIndex * -250) / visiblePlans;
 
   return (
-    <div className="w-full flex flex-col xs:-translate-y-[2rem]  items-center   ">
-      <div className="overflow-hidden sm:px-8 md:px-20  lg:px-32 flex w-full">
+    <div className="w-full flex flex-col xs:-translate-y-[2rem] items-center   ">
+      <div className="overflow-hidden sm:px-8 md:px-20  lg:px-32 flex  w-full">
         <div
-          className="flex transition-transform duration-500 ease-in-out w-full "
+          className="flex transition-transform duration-500 ease-in-out   "
           style={{
             transform: `translateX(${translateX}%)`,
             width: `${(INSURANCE_CATEGORIES.length / visiblePlans) * 100}%`,
           }}
         >
-          <ul className="grid grid-cols-2 xs:translate-x-[13rem]   xl:grid-cols-3 gap-10 xs:gap-x-[20rem] mt-24 place-items-center w-full xl:w-[70rem] mx-auto  ">
+          <ul className="grid grid-cols-2 xs:translate-x-[40svw]   xl:grid-cols-3 gap-10 xs:gap-x-[20rem] mt-24 place-items-center w-full xl:w-[70rem] mx-auto  ">
             {INSURANCE_CATEGORIES.map((category, index) => (
               <li
                 key={index}
-                className="flex flex-col justify-center items-center gap-5  "
+                className="flex flex-col justify-center items-center gap-5 w-svw   "
               >
                 <img
                   src={category.icon}

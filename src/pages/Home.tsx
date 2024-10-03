@@ -11,12 +11,12 @@ const Home = () => {
       <header>
         <div className="w-full   relative h-[35rem] overflow-hidden ">
           {/* Left Side with Text */}
-          <div className=" backgn-gradient h-full  absolute  md:pl-10 w-[55svw]  md:w-[55svw]  lg:w-[45svw]  2xl:w-[59svw] 3xl:w-[70svw]   lg:z-10 xl:w-[50svw] flex justify-start items-center ">
-            <div className="relative  md:w-[25rem] xl:w-[30rem] lg:w-auto mx-auto  px-5  xl:px-0 z-10 ">
-              <h1 className="text-4xl lg:text-5xl   font-extrabold text-[#005cff]">
+          <div className=" backgn-gradient h-full  absolute  md:pl-10 w-[60svw]   md:w-[55svw]  lg:w-[45svw]  2xl:w-[59svw] 3xl:w-[70svw]   lg:z-10 xl:w-[50svw] flex justify-start items-center ">
+            <div className="relative  md:w-[25rem] xl:w-[30rem] lg:w-auto mx-auto  px-5   xl:px-0 z-10 ">
+              <h1 className="xs:text-3xl text-4xl lg:text-5xl   font-extrabold text-[#005cff]">
                 YOUR GUIDE TO QUALITY COVERAGE
               </h1>
-              <h2 className="pt-10 text-xl text-gray-500">
+              <h2 className="pt-10 xs:text-lg xs:pr-3 text-xl text-gray-500">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </h2>
@@ -35,7 +35,7 @@ const Home = () => {
             <img
               src="Assets/hero-bg.jpg"
               alt="hero image"
-              className="xl:object-fit object-cover xs:w-[90%] xs:translate-x-56  w-[65%] translate-x-32 lg:translate-x-0 xl:w-auto  "
+              className="xl:object-fit object-cover xs:w-[100%] xs:translate-x-[14rem]  w-[65%] translate-x-32 lg:translate-x-0 xl:w-auto  "
             />
           </div>
         </div>
@@ -46,18 +46,18 @@ const Home = () => {
         {/* INSURANCE PLANS  */}
         <Insurance />
 
-        <div className="lg:flex justify-center pl-10  py-20 xs:pt-24 ">
+        <div className="lg:flex justify-center w-full sm:pl-10  py-20 xs:pt-24 xs:px-14 ">
           <img
             src="Assets/committed-help.png"
             alt="committed-help"
-            className="xl:w-[30rem] xl:h-[30rem] w-[23rem] h-[22rem]"
+            className="xl:w-[30rem] xl:h-[30rem] w-[23rem] h-[22rem]  xs:w-full"
           />
 
-          <div className="pl-14 xl:pl-20 xl:w-2/4 w-full   ">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl  font-bold pt-10 xs:w-[25rem] w-[35rem]">
+          <div className="xs:px-7 sm:pl-14 xl:pl-20 xl:w-2/4 w-full   ">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl  font-bold pt-10 xs:w-full w-[35rem]">
               Committed to help you find the right plan
             </h2>
-            <p className="mt-10 xs:w-[23rem] w-[28rem] text-zinc-500">
+            <p className="mt-10 xs:w-full w-[28rem] text-zinc-500">
               Insurance is an important financial tool that can help you protect
               yourself and your loved ones from financial losses in the event of
               an unexpected event. It is important to consider your individual
@@ -96,14 +96,14 @@ const Home = () => {
         <Plans />
       </section>
 
-      <section className="w-full  flex flex-col justify-center items-center pt-20 xs:px-10 2xl:px-48  bg-[##f8f8f8]">
+      <section className="w-full  flex flex-col justify-center items-center pt-20 xs:pl-3 2xl:px-48  bg-[##f8f8f8]">
         <div className="flex flex-col  xl:flex-row xs:pr-10  w-full sm:pl-20  ">
           <img
             src="Assets/protecting.png"
             alt=" protecting image"
             className="lg:w-[30rem] lg:h-[30rem] sm:w-[25rem] sm:h-[25rem]  w-full h-full"
           />
-          <div className="pl-10 lg:translate-x-44  xl:translate-x-0 pt-10 w-[25rem] sm:w-[30rem]  md:w-[40rem] ">
+          <div className=" pt-10 w-full pl-10 lg:translate-x-44   xl:translate-x-0   sm:w-[30rem]  md:w-[40rem] ">
             <h1 className="xs:text-2xl text-5xl font-bold">
               Protecting people, one policy at a time
             </h1>
