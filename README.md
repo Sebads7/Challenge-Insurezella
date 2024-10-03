@@ -1,50 +1,27 @@
-# React + TypeScript + Vite
+This project is part of the A Teamwork challenge for Insurezella. The goal was to develop a responsive and functional web interface using React, Vite, TypeScript, and Tailwind CSS.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features
+Responsive Design: Fully responsive for mobile, tablet, and desktop screens.
+Modal Functionality: Modals are used to enhance user experience.
+Mobile Slides: Slide functionality on mobile devices when pressing the dots.
+High Performance: Built with modern tools like Vite for fast performance and a smooth development environment.
+Technologies Used
+React: JavaScript library for building user interfaces.
+Vite: Fast build tool for modern web projects.
+TypeScript: A superset of JavaScript that adds static typing.
+Tailwind CSS: Utility-first CSS framework.
+Vercel: Deployment platform used for production.
 
-Currently, two official plugins are available:
+Installation and Usage
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1)Clone the repository:
+git clone https://github.com/Sebads7/Challenge_A-Teamwork_Insurezella.git
+2)Navigate to project directory
+cd Challenge_A-Teamwork_Insurezella
+3)install dependencies
+npm install
+4)run locally
+npm run dev
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Deployment
+The project is deployed on Vercel and can be accessed here: https://challenge-a-teamwork-insurezella-two.vercel.app/
