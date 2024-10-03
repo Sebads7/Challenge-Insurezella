@@ -20,9 +20,9 @@ const Compare = () => {
   };
   return (
     <div className="  flex flex-col  ">
-      <div className="md:px-5 lg:px-24 2xl:px-14  overflow-hidden">
+      <div className="sm:px-5 lg:px-24 2xl:px-14 translate-x-2  overflow-hidden ">
         <div
-          className="flex w-full  2xl:gap-8  transition-transform duration-500 ease-in-out  sm:grid grid-cols-2 xs:gap-10 "
+          className="flex w-full  2xl:gap-8  transition-transform duration-500 ease-in-out  sm:grid grid-cols-2 xs:gap-x-10    "
           style={{
             transform: `translateX(${translateX}%)`,
             width: `${(COMPARE_PLANS.length / visiblePlans) * 100}
@@ -30,12 +30,12 @@ const Compare = () => {
           }}
         >
           {COMPARE_PLANS.map((plan, index) => (
-            <div className=" md:px-5  z-10  w-full" key={index}>
-              <div className="w-full xs:w-[28rem]  h-[14rem]  overflow-hidden">
+            <div className=" md:px-5  z-10  w-full " key={index}>
+              <div className="w-full xs:w-[28rem]   px-3 md:px-0 h-[14rem]  overflow-hidden">
                 <img
                   src={plan.image}
                   alt={plan.name}
-                  className="object-cover h-[20rem] sm:w-[16rem] md:w-full "
+                  className="object-cover h-[20rem] w-full "
                 />
               </div>
               <ul className="md:pl-7   z-10">
@@ -60,7 +60,7 @@ const Compare = () => {
         </div>
       </div>
       {/* Navigation Dots */}
-      <div className="flex justify-center items-center gap-4  bottom-0 mt-5   z-10  sm:hidden">
+      <div className="flex justify-center items-center gap-4  bottom-0 translate-y-5 mt-5   z-10  sm:hidden">
         {COMPARE_PLANS.slice(0, 4).map((_, index) => (
           <div
             key={index}

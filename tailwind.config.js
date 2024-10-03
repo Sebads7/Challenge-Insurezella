@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       screens: {
-        xs: { max: "640px" },
+        xs: { max: "639px" },
         "3xl": { min: "2000px" },
       },
       colors: {

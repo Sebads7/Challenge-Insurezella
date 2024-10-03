@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function useScreen() {
+export default function useScreen() {
   const [isTablet, setIsTablet] = useState<null | boolean>(null); // Initial state is null
   const [isLarge, setIsLarge] = useState<null | boolean>(null); // Same for large screens
   const [isMobile, setIsMobile] = useState<null | boolean>(null); // Same for mobile screens
@@ -29,5 +29,3 @@ function useScreen() {
 
   return { isTablet, isLarge, isMobile };
 }
-
-export default useScreen;

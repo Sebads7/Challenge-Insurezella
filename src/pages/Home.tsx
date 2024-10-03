@@ -117,7 +117,7 @@ const Home = () => {
               in times of uncertainty.
             </p>
 
-            <Button name=" Learn More" className="px-28 w-[15rem] " />
+            <Button name=" Learn More" className=" w-[15rem] " />
           </div>
         </div>
 
