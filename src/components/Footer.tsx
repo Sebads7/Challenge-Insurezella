@@ -2,6 +2,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 import { FOOTER_DATA } from "../constants";
 import useScreenSizes from "../hooks/useScreenSizes";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const { isMobile, isTablet } = useScreenSizes();
@@ -26,10 +27,18 @@ const Footer = () => {
                 Reliable Insurance Umbrella"
               </p>
               <div className="flex flex-row  gap-4 pt-3">
-                <FaFacebook className="w-5 h-5" />
-                <FaTwitter className="w-5 h-5" />
-                <FaInstagram className="w-5 h-5" />
-                <FaLinkedin className="w-5 h-5" />
+                <Link to="">
+                  <FaFacebook className="w-5 h-5" />
+                </Link>
+                <Link to="/">
+                  <FaTwitter className="w-5 h-5" />
+                </Link>
+                <Link to="/">
+                  <FaInstagram className="w-5 h-5" />
+                </Link>
+                <Link to="/">
+                  <FaLinkedin className="w-5 h-5" />
+                </Link>
               </div>
             </div>
 
@@ -52,8 +61,14 @@ const Footer = () => {
                     ))}
                   {section.links &&
                     section.links.map((link, index) => (
-                      <li key={index} className="pb-3 ">
-                        {link}
+                      <li key={index} className="pb-3 w-fit ">
+                        <a
+                          href=""
+                          className=" hover:text-blue-500 cursor-pointer "
+                        >
+                          {" "}
+                          {link}
+                        </a>
                       </li>
                     ))}
                   {section.info &&

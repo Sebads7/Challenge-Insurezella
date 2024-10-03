@@ -47,7 +47,7 @@ const Compare = () => {
                     {plan.description}
                   </p>
 
-                  <button className="text-blue-600 hover:border-blue-400 hover:border-b transition duration-300 ease-in-out flex gap-4 items-center ">
+                  <button className="text-blue-600 hover:border-blue-400 hover:border-b w-fit transition duration-300 ease-in-out flex gap-4 items-center ">
                     {plan.button}
                     <span>
                       <FaArrowRightLong />
