@@ -49,7 +49,7 @@ const NavBar = () => {
     <>
       <div className="w-full flex lg:block justify-center md:justify-between  items-center h-full py-5 pl-32 md:pl-40  xl:pl-44  lg:h-12 bg-[#2e77f9] ">
         <GiHamburgerMenu
-          className="text-white text-4xl rounded-sm lg:hidden block   "
+          className="text-white text-5xl rounded-lm lg:hidden block   "
           onClick={() => setOpenNav(true)}
         />
         <ul className="flex flex-col lg:flex-row pl-14 sm:pr-10   lg:pl-0  h-full md:items-center  lg:justify-between gap-2 lg:gap-0 text-white xl:px-40  ">

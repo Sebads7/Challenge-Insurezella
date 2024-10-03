@@ -77,7 +77,7 @@ const Footer = () => {
         {(isMobile || isTablet) && (
           <div className="w-full relative">
             {/* LEFT WHITE CONTAINER */}
-            <div className="w-[90%] h-[15rem] bg-white shadow-lg  translate-y-6 flex justify-between items-center px-5">
+            <div className="w-[90%] h-[15rem] bg-white shadow-lg  translate-y-6 flex justify-between items-center px-5 sm:px-20">
               <div className="w-[10rem]  flex flex-col items-center justify-center gap-2 ">
                 <img
                   src="Assets/logo.png"
@@ -127,8 +127,8 @@ const Footer = () => {
             <div className="w-full h-[7rem] bg-[#2e77f9] z-0  "></div>
 
             {/* RIGHT WHITE CONTAINER */}
-            <div className="w-[90%] absolute right-0  h-[16rem]  bg-white -translate-y-6 shadow-lg z-10 flex items-center  px-5 ">
-              <div className="flex w-full  ">
+            <div className="w-[90%] absolute right-0  h-[17rem]  bg-white -translate-y-6 shadow-lg z-10 flex items-center  px-5  ">
+              <div className="flex w-full sm:px-14 pt-3 ">
                 {FOOTER_DATA.map(
                   (section, index) =>
                     (section.links || section.info) && (

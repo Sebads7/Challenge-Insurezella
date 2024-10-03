@@ -14,16 +14,22 @@ const Plans = () => {
     setActiveIndex(index);
   };
 
-  //   const visiblePlans = isMobile ? 2 : 5;
+  const visiblePlans = isMobile ? 3 : 5;
 
-  //   const translateX = (activeIndex * -80) / visiblePlans;
+  const translateX = (activeIndex * -250) / visiblePlans;
 
   return (
-    <div className="w-full flex justify-center">
-      <div className="overflow-hidden  ">
-        <ul className="grid sm:grid-cols-2  xl:grid-cols-3 gap-10 mt-24 place-items-center lg:w-[50rem] xl:w-[70rem]   mx-auto ">
-          {INSURANCE_CATEGORIES.slice(0, isMobile ? 3 : 6).map(
-            (category, index) => (
+    <div className="w-full flex flex-col xs:-translate-y-[2rem]  items-center   ">
+      <div className="overflow-hidden sm:px-8 md:px-20  lg:px-32 flex w-full">
+        <div
+          className="flex transition-transform duration-500 ease-in-out w-full "
+          style={{
+            transform: `translateX(${translateX}%)`,
+            width: `${(INSURANCE_CATEGORIES.length / visiblePlans) * 100}%`,
+          }}
+        >
+          <ul className="grid grid-cols-2 xs:translate-x-[13rem]   xl:grid-cols-3 gap-10 xs:gap-x-[20rem] mt-24 place-items-center w-full xl:w-[70rem] mx-auto  ">
+            {INSURANCE_CATEGORIES.map((category, index) => (
               <li
                 key={index}
                 className="flex flex-col justify-center items-center gap-5  "
@@ -41,17 +47,17 @@ const Plans = () => {
                   {category.description}
                 </p>
               </li>
-            )
-          )}
-        </ul>
+            ))}
+          </ul>
+        </div>
       </div>
 
       {/* Navigation Dots */}
-      <div className="flex justify-center items-center gap-2 absolute bottom-7  sm:hidden">
+      <div className="flex justify-center items-center gap-3 absolute bottom-[-4rem]  sm:hidden">
         {INSURANCE_CATEGORIES.slice(0, 2).map((_, index) => (
           <div
             key={index}
-            className={`w-4 h-4 rounded-full cursor-pointer mobile:w-5 mobile:h-5  ${
+            className={`w-5 h-5 rounded-full cursor-pointer mobile:w-5 mobile:h-5  ${
               index === activeIndex ? "bg-blue-600 " : "bg-gray-300"
             }`}
             onClick={() => handleDotClick(index)}

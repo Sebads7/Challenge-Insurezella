@@ -11,9 +11,9 @@ const Home = () => {
       <header>
         <div className="w-full   relative h-[35rem] overflow-hidden ">
           {/* Left Side with Text */}
-          <div className="xs:flex absolute w-full md:w-[55svw] lg:w-[45svw] xl:w-[50svw] 2xl:w-[59svw] 3xl:w-[70svw] md:pl-10 xl:pl-0  xs:pt-[5rem] pt-[7.5rem] backgn-gradient h-full lg:z-10 ">
-            <div className="relative xs:text-center md:w-[25rem] xl:w-[30rem] lg:w-auto mx-auto ">
-              <h1 className="xs:text-5xl sm:text-4xl xl:text-5xl   font-extrabold text-[#005cff]">
+          <div className=" backgn-gradient h-full  absolute  md:pl-10 w-[55svw]  md:w-[55svw]  lg:w-[45svw]  2xl:w-[59svw] 3xl:w-[70svw]   lg:z-10 xl:w-[50svw] flex justify-start items-center ">
+            <div className="relative  md:w-[25rem] xl:w-[30rem] lg:w-auto mx-auto  px-5  xl:px-0 z-10 ">
+              <h1 className="text-4xl lg:text-5xl   font-extrabold text-[#005cff]">
                 YOUR GUIDE TO QUALITY COVERAGE
               </h1>
               <h2 className="pt-10 text-xl text-gray-500">
@@ -31,11 +31,11 @@ const Home = () => {
           </div>
 
           {/* Right Side with Hero Image */}
-          <div className="w-full h-full flex justify-end xs:hidden ">
+          <div className="w-full h-full flex justify-end  ">
             <img
               src="Assets/hero-bg.jpg"
               alt="hero image"
-              className="xl:object-fit sm:object-cover  md:w-[65%] md:translate-x-32 lg:translate-x-0 xl:w-auto "
+              className="xl:object-fit object-cover xs:w-[90%] xs:translate-x-56  w-[65%] translate-x-32 lg:translate-x-0 xl:w-auto  "
             />
           </div>
         </div>
@@ -90,14 +90,14 @@ const Home = () => {
       </section>
 
       <section className="w-full h-full xs:flex flex-col justify-center items-center  relative  bg-[#e9f5ff]/80 py-24  ">
-        <h1 className="text-center text-2xl sm:text-3xl xl:text-5xl font-bold xs:font-extrabold">
+        <h1 className="text-center text-3xl  xl:text-5xl font-bold xs:font-extrabold xs:w-[90%]">
           Pick the insurance that suits your needs.
         </h1>
         <Plans />
       </section>
 
       <section className="w-full  flex flex-col justify-center items-center pt-20 xs:px-10 2xl:px-48  bg-[##f8f8f8]">
-        <div className="flex flex-col  xl:flex-row xs:pr-10    w-full pl-20  ">
+        <div className="flex flex-col  xl:flex-row xs:pr-10  w-full sm:pl-20  ">
           <img
             src="Assets/protecting.png"
             alt=" protecting image"
@@ -117,12 +117,12 @@ const Home = () => {
               in times of uncertainty.
             </p>
 
-            <Button name=" Learn More" className="px-20 " />
+            <Button name=" Learn More" className="px-28 w-[15rem] " />
           </div>
         </div>
 
         <div className=" overflow-hidden w-full  h-full pb-20 sm:mb-16 xl:mt-10 bg-[#f8f8f8]">
-          <h2 className="text-center font-bold text-5xl pt-28 pb-10">
+          <h2 className="text-center font-bold text-4xl lg:text-5xl pt-28 pb-10">
             We're here to help
           </h2>
 
