@@ -1,9 +1,11 @@
 import Button from "../components/Button";
-import { COMPARE_SERVICE } from "../constants";
+import { COMPARE_PLANS, COMPARE_SERVICE, INSURANCE_PLANS } from "../constants";
 
-import Insurance from "../components/Insurance";
+import InsuranceSlider from "../components/InsuranceSlider";
 import Plans from "../components/Plans";
-import Compare from "../components/Compare";
+
+import { CompareItems, Items } from "../components/Items";
+import Compare from "../components/CompareSlider";
 
 const Home = () => {
   return (
@@ -11,7 +13,7 @@ const Home = () => {
       <header>
         <div className="w-full   relative h-[35rem] overflow-hidden ">
           {/* Left Side with Text */}
-          <div className=" backgn-gradient h-full  absolute  md:pl-10 w-[60svw]   md:w-[55svw]  lg:w-[45svw]  2xl:w-[59svw] 3xl:w-[70svw]   lg:z-10 xl:w-[50svw] flex justify-start items-center ">
+          <div className=" backgn-gradient h-full  absolute  md:pl-10 w-[60svw]   md:w-[55svw]  lg:w-[45svw]  2xl:w-[59svw] 3xl:w-[80svw]   lg:z-10 xl:w-[50svw] flex justify-start items-center ">
             <div className="relative  md:w-[25rem] xl:w-[30rem] lg:w-auto mx-auto  px-5   xl:px-0 z-10 ">
               <h1 className="xs:text-3xl text-4xl lg:text-5xl   font-extrabold text-[#005cff]">
                 YOUR GUIDE TO QUALITY COVERAGE
@@ -44,7 +46,17 @@ const Home = () => {
       {/* COMMITTED SECTION */}
       <section className="w-full bg-white ">
         {/* INSURANCE PLANS  */}
-        <Insurance />
+        {/* GRID VIEW */}
+        <div className="pt-10">
+          <div className="hidden md:flex justify-center items-center md:space-x-5 xl:space-x-10  ">
+            {INSURANCE_PLANS.map((plan, index) => (
+              <Items plan={plan} key={index} />
+            ))}
+          </div>
+        </div>
+
+        {/* SLIDER VIEW */}
+        <InsuranceSlider />
 
         <div className="lg:flex justify-center w-full sm:pl-10  py-20 xs:pt-24 xs:px-14 ">
           <img
@@ -125,8 +137,14 @@ const Home = () => {
           <h2 className="text-center font-bold text-4xl lg:text-5xl pt-28 pb-10">
             We're here to help
           </h2>
-
+          {/* SLIDER VIEW */}
           <Compare />
+          {/* GRID VIEW */}
+          <div className="sm:grid grid-cols-2 gap-y-14 w-full hidden">
+            {COMPARE_PLANS.map((plan, index) => (
+              <CompareItems plan={plan} key={index} />
+            ))}
+          </div>
         </div>
       </section>
     </div>
