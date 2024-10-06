@@ -163,7 +163,7 @@ const NavBar = () => {
                 </button>
               </div>
 
-              <h1 className="text-center  text-4xl pt-10">CALL US NOW!</h1>
+              <h2 className="text-center  text-4xl pt-10">CALL US NOW!</h2>
             </div>
           </div>
         )}
