@@ -28,7 +28,7 @@ export const INSURANCE_PLANS = [
   },
   {
     name: "Medicare Advantage",
-    icon: "Assets/icons/hospital.png",
+    icon: "Assets/icons/hospital2.png",
   },
   {
     name: "Life Insurance",

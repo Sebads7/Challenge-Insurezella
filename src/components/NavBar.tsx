@@ -61,12 +61,12 @@ const NavBar = () => {
         </div>
 
         {/* WANT TO CONNECT SECTION */}
-        <ul className="flex md:flex-row flex-col md:items-end   lg:items-center  w-full  items-center  h-full justify-end lg:justify-between md:gap-1 md:gap-4   ">
-          <li className="font-extrabold text-[14px] md:pr-5 lg:text-xl ">
+        <ul className="flex md:flex-row flex-col md:items-end   lg:items-center  w-full  items-center  h-full justify-end lg:justify-between md:gap-1 lg:gap-4   ">
+          <li className="font-extrabold text-[14px] md:pr-5 lg:pl-32 lg:text-xl ">
             Want to Connect with Us?
           </li>
           <li className="flex md:flex-row flex-col md:gap-1 lg:gap-6 text-[9px] lg:text-sm font-semibold">
-            <p className="flex  items-center gap-1 lg:gap-2 ">
+            <p className="flex  items-center gap-1 lg:gap-2  ">
               <span>
                 <MdEmail className="w-4 h-4 lg:w-5 lg:h-5" />
               </span>

@@ -34,7 +34,7 @@ export const CompareItems = ({ plan }: { plan: Plan }) => {
         <img
           src={plan.image}
           alt={plan.name}
-          className="object-cover h-full lg:h-[20rem] "
+          className="object-cover h-full lg:h-[20rem] w-full "
         />
       </div>
       <ul className="md:pl-7 2xl:w-[90%] mx-auto px-4   z-10 ">
@@ -42,7 +42,7 @@ export const CompareItems = ({ plan }: { plan: Plan }) => {
           <h3 className="md:text-xl  lg:text-3xl font-semibold pt-5  ">
             {plan.name}
           </h3>
-          <p className="text-gray-500 text-xs md:text-base lg:text-lg h-[4.5rem] sm:h-[6rem] md:h-28">
+          <p className="text-gray-500 text-xs md:text-base xl:text-lg h-[4.5rem] sm:h-[6rem] md:h-28">
             {plan.description}
           </p>
 
