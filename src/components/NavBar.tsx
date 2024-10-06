@@ -52,27 +52,29 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="w-full flex xs:justify-end  xs:pr-5 justify-center sm:justify-between  items-center h-full py-5  lg:block lg:px-10 xl:px-44 sm:pl-44  lg:h-12 bg-[#2e77f9] ">
-        <div className=" w-[7rem] flex justify-center items-center py-4 z-[20] lg:hidden  ">
+      <div className="w-full flex justify-between  items-center h-full py-5 px-5  lg:block  lg:h-12 bg-[#2e77f9]  text-white">
+        <div className=" z-10 lg:hidden   flex justify-end w-[14rem]  md:w-[13rem] ">
           <GiHamburgerMenu
-            className="text-white text-5xl rounded-lm lg:hidden block     "
+            className="text-5xl rounded-lm lg:hidden block    "
             onClick={() => setOpenNav(true)}
           />
         </div>
-        <ul className="flex flex-col lg:flex-row xs:pl-3  h-full md:items-center  sm:pr-10    lg:justify-between gap-2 lg:gap-0 text-white   ">
-          <li className="font-bold text-lg  lg:text-xl ">
+
+        {/* WANT TO CONNECT SECTION */}
+        <ul className="flex md:flex-row flex-col md:items-end   lg:items-center  w-full  items-center  h-full justify-end lg:justify-between md:gap-1 md:gap-4   ">
+          <li className="font-extrabold text-[14px] md:pr-5 lg:text-xl ">
             Want to Connect with Us?
           </li>
-          <li className="flex flex-col lg:flex-row  gap-2 lg:gap-6 text-xs lg:text-sm font-semibold">
-            <p className="flex  items-center gap-2 ">
+          <li className="flex md:flex-row flex-col md:gap-1 lg:gap-6 text-[9px] lg:text-sm font-semibold">
+            <p className="flex  items-center gap-1 lg:gap-2 ">
               <span>
-                <MdEmail className="w-5 h-5 " />
+                <MdEmail className="w-4 h-4 lg:w-5 lg:h-5" />
               </span>
               Mail us: support@insurezella.com
             </p>
             <p className="flex items-center gap-2 ">
               <span>
-                <IoIosCall className="w-5 h-5 " />
+                <IoIosCall className="w-4 h-4 lg:w-5 lg:h-5" />
               </span>
               Call us: (887) 227 0774
             </p>

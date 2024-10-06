@@ -20,33 +20,38 @@ const Slide = () => {
     }
   };
 
-  const { isMobile } = useScreenSizes();
+  const { smScreen, xsScreen } = useScreenSizes();
 
   return (
     <div className="h-full  relative ">
-      <div className=" relative  md:hidden">
+      <div className=" relative  lg:hidden">
         <Swiper
           modules={[Pagination]}
-          onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
           spaceBetween={1}
-          slidesPerView={isMobile ? 2 : 3}
+          slidesPerGroup={smScreen || xsScreen ? 2 : 1}
+          slidesPerView={2}
+          className=" w-[26rem] "
+          onSlideChange={(swiper) =>
+            setActiveIndex(
+              swiper.activeIndex === 0 ? 0 : swiper.activeIndex - 1
+            )
+          }
           onSwiper={(swiper) => (swiperRef.current = swiper)}
-          className="w-[25rem] sm:w-[36rem]"
         >
           {INSURANCE_PLANS.map((plan, index) => (
-            <SwiperSlide className=" py-10 ">
+            <SwiperSlide className=" py-10  ">
               <Items plan={plan} key={index} />
             </SwiperSlide>
           ))}
         </Swiper>
 
         {/* Custom Navigation Dots */}
-        <div className="flex justify-center items-center gap-3 pt-1 absolute  w-full md:hidden ">
-          {INSURANCE_PLANS.slice(0, isMobile ? 3 : 2).map((_, index) => (
+        <div className="flex justify-center items-center gap-3 pt-1 absolute  w-full lg:hidden ">
+          {INSURANCE_PLANS.slice(0, 3).map((_, index) => (
             <div
               key={index}
               className={`w-5 h-5 rounded-full cursor-pointer ${
-                index === activeIndex ? "bg-blue-600" : "bg-gray-300"
+                activeIndex === index ? "bg-blue-600" : "bg-gray-300"
               }`}
               onClick={() => handleDotClick(index)}
             />

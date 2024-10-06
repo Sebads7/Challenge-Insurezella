@@ -5,81 +5,85 @@ import useScreenSizes from "../hooks/useScreenSizes";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const { isMobile, isTablet } = useScreenSizes();
+  const { xsScreen, smScreen, isTablet } = useScreenSizes();
 
-  if (isMobile === null || isTablet === null) {
-    return null;
-  }
   return (
     <>
-      <footer className="w-full h-[20rem] flex justify-center relative bg-[#f8f8f8] ">
-        <div className="w-[90%] py-5 px-10   bg-white absolute shadow-2xl bottom-10 z-10 border hidden lg:block ">
-          <div className="grid grid-cols-4 w-full h-full  ">
+      <footer className=" w-full lg:h-[20rem]  flex justify-center relative   bg-[#f8f8f8] ">
+        <div className="w-[90%] py-5 px-2 lg:px-10   bg-white absolute shadow-2xl bottom-10 z-10 border hidden lg:block ">
+          <div className="grid grid-cols-4 w-full h-full z-10 ">
             {/* FIRST COLUMN */}
-            <div className="w-[10rem]  flex flex-col items-center justify-center -translate-y-2 gap-2 ">
+            <div className="w-[9rem] lg:w-[10rem]  flex flex-col items-center justify-center lg:-translate-y-2 gap-2 ">
               <img
                 src="Assets/logo.png"
                 alt="logo"
                 className="w-14 h-14 rounded-md"
               />
-              <p className="text-center text-sm text-gray-500">
-                Discover the Peace of Mind Your Deserve with Insurezella "Your
+              <p className="text-center md:text-xs  lg:text-sm text-gray-500">
+                "Discover the Peace of Mind Your Deserve with Insurezella "Your
                 Reliable Insurance Umbrella"
               </p>
               <div className="flex flex-row  gap-4 pt-3">
                 <Link to="">
-                  <FaFacebook className="w-5 h-5" />
+                  <FaFacebook className="lg:w-5 lg:h-5 w-4 h-4" />
                 </Link>
                 <Link to="/">
-                  <FaTwitter className="w-5 h-5" />
+                  <FaTwitter className="lg:w-5 lg:h-5 w-4 h-4" />
                 </Link>
                 <Link to="/">
-                  <FaInstagram className="w-5 h-5" />
+                  <FaInstagram className="lg:w-5 lg:h-5 w-4 h-4" />
                 </Link>
                 <Link to="/">
-                  <FaLinkedin className="w-5 h-5" />
+                  <FaLinkedin className="lg:w-5 lg:h-5 w-4 h-4" />
                 </Link>
               </div>
             </div>
 
             {FOOTER_DATA.map((section, index) => (
-              <div key={index}>
-                <p className="text-xl font-bold pb-2 text-[#4d5190]">
-                  {section.title}
-                </p>
-                <ul className="text-gray-500">
+              <div key={index} className="pt-5">
+                <ul className="text-gray-500 text-xs lg:text-sm  ">
+                  <li
+                    className={`text-lg lg:text-xl font-bold pb-2 text-[#4d5190]  ${
+                      section.title === "Get In Touch"
+                        ? " translate-x-[-1rem] lg:translate-x-0 "
+                        : ""
+                    } `}
+                  >
+                    {section.title}
+                  </li>
                   {section.services &&
                     section.services.map((service, index) => (
                       <li key={index} className="flex items-center gap-3 pb-3 ">
                         <img
                           src={section.icons[index]}
                           alt={service}
-                          className="w-4 h-4"
+                          className="lg:w-4 lg:h-4 w-3 h-3"
                         />
                         {service}
                       </li>
                     ))}
                   {section.links &&
                     section.links.map((link, index) => (
-                      <li key={index} className="pb-3 w-fit ">
+                      <li key={index} className="pb-3  lg:w-fit ">
                         <a
                           href=""
                           className=" hover:text-blue-500 cursor-pointer "
                         >
-                          {" "}
                           {link}
                         </a>
                       </li>
                     ))}
                   {section.info &&
                     section.info.map((info, index) => (
-                      <li key={index} className="flex items-center gap-2">
+                      <li
+                        key={index}
+                        className="flex items-center gap-2 translate-x-[-1rem] lg:translate-x-0"
+                      >
                         <img
                           src={section.icons[index]}
                           alt={info}
-                          className="w-4 h-4"
+                          className="lg:w-4 lg:h-4 w-3 h-3"
                         />
-
                         <p className="w-3/5"> {info}</p>
                       </li>
                     ))}
@@ -89,17 +93,17 @@ const Footer = () => {
           </div>
         </div>
 
-        {(isMobile || isTablet) && (
-          <div className="w-full relative">
+        {(xsScreen || smScreen || isTablet) && (
+          <div className="w-full relative ">
             {/* LEFT WHITE CONTAINER */}
-            <div className="w-[90%] h-[15rem] bg-white shadow-lg  translate-y-6 flex justify-between items-center px-5 sm:px-20">
+            <div className="w-[90%] h-[15rem] bg-white  translate-y-6 flex justify-center items-center gap-10 md:gap-40  shadow-lg shadow-blue-500/50">
               <div className="w-[10rem]  flex flex-col items-center justify-center gap-2 ">
                 <img
                   src="Assets/logo.png"
                   alt="logo"
                   className="w-14 h-14 rounded-md"
                 />
-                <p className="text-center text-sm text-gray-500">
+                <p className="text-center text-xs  text-gray-500">
                   Discover the Peace of Mind Your Deserve with Insurezella "Your
                   Reliable Insurance Umbrella"
                 </p>
@@ -112,12 +116,12 @@ const Footer = () => {
               </div>
 
               <div>
-                <p className="text-xl font-bold pb-2 text-[#4d5190]">
+                <p className=" text-lg md:text-xl font-bold pb-2 text-[#4d5190]">
                   Services
                 </p>
                 {FOOTER_DATA.map((section, index) => (
                   <div key={index}>
-                    <ul className="text-gray-500">
+                    <ul className="text-gray-500 text-xs">
                       {section.services &&
                         section.services.map((service, index) => (
                           <li
@@ -127,7 +131,7 @@ const Footer = () => {
                             <img
                               src={section.icons[index]}
                               alt={service}
-                              className="w-4 h-4"
+                              className="w-3 h-3"
                             />
                             {service}
                           </li>
@@ -142,19 +146,19 @@ const Footer = () => {
             <div className="w-full h-[7rem] bg-[#2e77f9] z-0  "></div>
 
             {/* RIGHT WHITE CONTAINER */}
-            <div className="w-[90%] absolute right-0  h-[17rem]  bg-white -translate-y-6 shadow-lg z-10 flex items-center  px-5  ">
-              <div className="flex w-full sm:px-14 pt-3 ">
+            <div className="w-[90%] absolute right-0  h-[17rem]  bg-white -translate-y-6  z-10 flex items-center justify-center  md:gap-40 shadow-lg shadow-blue-500/50  ">
+              <div className="flex  ">
                 {FOOTER_DATA.map(
                   (section, index) =>
                     (section.links || section.info) && (
-                      <div key={index} className=" w-full">
-                        <p className="text-xl font-bold pb-2 text-[#4d5190]">
-                          {section.title}
-                        </p>
-                        <ul className="text-gray-500 w-full pr-2">
+                      <div key={index} className=" flex justify-center px-10 ">
+                        <ul className="text-gray-500  w-full pr-2 text-xs md:text-sm">
+                          <li className="text-lg md:text-xl font-bold pb-2 text-[#4d5190]">
+                            {section.title}
+                          </li>
                           {section.links &&
                             section.links.map((link, index) => (
-                              <li key={index} className="pb-[13px] w-full">
+                              <li key={index} className="pb-3">
                                 {link}
                               </li>
                             ))}
@@ -163,13 +167,13 @@ const Footer = () => {
                             section.info.map((info, index) => (
                               <li
                                 key={index}
-                                className="flex items-center gap-2 pb-2"
+                                className="flex items-center  gap-2 pb-2"
                               >
                                 {section.icons && section.icons[index] && (
                                   <img
                                     src={section.icons[index]}
                                     alt={info}
-                                    className="w-4 h-4"
+                                    className="w-3 h-3"
                                   />
                                 )}
                                 <p className="">{info}</p>
@@ -181,10 +185,10 @@ const Footer = () => {
                 )}
               </div>
             </div>
-            <div className="xs:w-full h-full bg-white"></div>
+            <div className="xs:w-full h-3/4 bg-bgwhite"></div>
           </div>
         )}
-        <div className="w-full h-[4rem] bg-[#2e77f9] bottom-0 absolute xs:hidden "></div>
+        <div className="w-full h-[4rem] bg-[#2e77f9] bottom-0 absolute hidden lg:block "></div>
       </footer>
     </>
   );
