@@ -30,7 +30,7 @@ const Slide = () => {
           spaceBetween={1}
           slidesPerGroup={smScreen || xsScreen ? 2 : 1}
           slidesPerView={2}
-          className=" w-[26rem] "
+          className=" xs:w-[24rem] w-[23rem] "
           onSlideChange={(swiper) =>
             setActiveIndex(
               swiper.activeIndex === 0 ? 0 : swiper.activeIndex - 1

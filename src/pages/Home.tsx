@@ -13,9 +13,9 @@ import CompareSlider from "../components/CompareSlider";
 
 const Home = () => {
   return (
-    <div className="w-full h-full  bg-bgwhite ">
+    <div className="w-full h-full bg-bgwhite    ">
       <header>
-        <div className="w-full  relative h-[28rem] lg:h-[35rem] overflow-hidden  ">
+        <div className="w-full  relative h-[28rem] lg:h-[35rem] overflow-hidden ">
           {/* Left Side with Text */}
           <div className="  h-full  absolute left-5 xs:left-0  md:left-[5rem] lg:left-[8rem] xl:left-[15rem]    flex justify-start items-center z-[1]">
             <div className="relative  w-[50%] lg:w-[60%]  pl-5  z-10 ">
@@ -37,7 +37,7 @@ const Home = () => {
           </div>
 
           {/* Right Side with Hero Image */}
-          <div className=" h-full flex xs:w-[170%] xs:-translate-x-[19rem] w-[180%] -translate-x-[19rem]  lg:translate-x-0 lg:w-full backgn-gradient lg:justify-end">
+          <div className=" h-full flex xs:w-[200%] xs:-translate-x-[22rem] w-[180%] -translate-x-[19rem]  lg:translate-x-0 lg:w-full backgn-gradient lg:justify-end">
             <img
               src="Assets/background.png"
               alt="hero image"
@@ -48,7 +48,7 @@ const Home = () => {
       </header>
 
       {/* COMMITTED SECTION */}
-      <section className="w-full bg-bgwhite ">
+      <section className="w-ful overflow-hidden  ">
         {/* INSURANCE PLANS  */}
         {/* GRID VIEW */}
         <div className="pt-10">
@@ -62,7 +62,7 @@ const Home = () => {
         {/* SLIDER VIEW */}
         <InsuranceSlider />
 
-        <div className="flex flex-col lg:flex-row  lg:gap-4 xl:gap-20  w-full py-20">
+        <div className="flex flex-col lg:flex-row  lg:gap-4 xl:gap-20  w-full py-20 overflow-hidden">
           <div className="w-full lg:pl-8 flex  lg:items-start  lg:justify-end  scale-75 lg:scale-100 ">
             <img
               src="Assets/committed-help.png"
@@ -107,7 +107,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="w-full h-full xs:flex flex-col justify-center items-center  relative  bg-[#e9f5ff]/80 py-24  ">
+      <section className="w-full h-full xs:flex flex-col justify-center items-center  relative  bg-[#e9f5ff]/80 py-24 overflow-hidden ">
         <h2 className="text-center  text-2xl md:text-4xl lg:text-5xl font-bold xs:font-extrabold xs:w-[90%]">
           Pick the insurance that suits your needs.
         </h2>
@@ -139,7 +139,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="w-full   lg:flex flex-col justify-center items-center md:pt-20 xs:pl-3 md:px-10  xl:px-28 bg-[##f8f8f8]">
+      <section className="w-full   lg:flex flex-col justify-center items-center md:pt-20  md:px-10  xl:px-28 bg-[##f8f8f8] overflow-hidden">
         <div className="flex flex-col  lg:flex-row w-full  ">
           {/* LEFT IMAGE  */}
           <div className=" flex md:justify-center lg:justify-end   w-full">

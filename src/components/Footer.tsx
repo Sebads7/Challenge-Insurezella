@@ -9,7 +9,7 @@ const Footer = () => {
 
   return (
     <>
-      <footer className=" w-full lg:h-[20rem]  flex justify-center relative   bg-[#f8f8f8] ">
+      <footer className=" w-full lg:h-[20rem]  lg:flex justify-center relative  overflow-hidden ">
         <div className="w-[90%] py-5 px-2 lg:px-10   bg-white absolute shadow-2xl bottom-10 z-10 border hidden lg:block ">
           <div className="grid grid-cols-4 w-full h-full z-10 ">
             {/* FIRST COLUMN */}
@@ -96,7 +96,7 @@ const Footer = () => {
         {(xsScreen || smScreen || isTablet) && (
           <div className="w-full relative ">
             {/* LEFT WHITE CONTAINER */}
-            <div className="w-[90%] h-[15rem] bg-white  translate-y-6 flex justify-center items-center gap-10 md:gap-40  shadow-lg shadow-blue-500/50">
+            <div className="w-11/12 h-[15rem] bg-white  translate-y-6 flex justify-center items-center gap-10 md:gap-40  shadow-lg shadow-blue-500/50">
               <div className="w-[10rem]  flex flex-col items-center justify-center gap-2 ">
                 <img
                   src="Assets/logo.png"
@@ -143,22 +143,32 @@ const Footer = () => {
             </div>
 
             {/* MIDDLE BLUE CONTAINER */}
-            <div className="w-full h-[7rem] bg-[#2e77f9] z-0  "></div>
+            <div className=" h-[7rem] bg-[#2e77f9] z-0  "></div>
 
             {/* RIGHT WHITE CONTAINER */}
-            <div className="w-[90%] absolute right-0  h-[17rem]  bg-white -translate-y-6  z-10 flex items-center justify-center  md:gap-40 shadow-lg shadow-blue-500/50  ">
-              <div className="flex  ">
+
+            <div className="w-11/12 pl-4 ml-auto  h-[15rem]  bg-white -translate-y-6  z-10 flex items-center justify-center  md:gap-40 shadow-lg shadow-blue-500/50   ">
+              <div className="flex w-full justify-center  ">
                 {FOOTER_DATA.map(
                   (section, index) =>
                     (section.links || section.info) && (
-                      <div key={index} className=" flex justify-center px-10 ">
-                        <ul className="text-gray-500  w-full pr-2 text-xs md:text-sm">
-                          <li className="text-lg md:text-xl font-bold pb-2 text-[#4d5190]">
-                            {section.title}
-                          </li>
+                      <div key={index} className=" md:px-10 ">
+                        <p
+                          className={`  ${
+                            section.title === "Get In Touch"
+                              ? " translate-x-[2.5rem]"
+                              : ""
+                          }    text-lg md:text-xl font-bold pb-2 text-[#4d5190]  `}
+                        >
+                          {section.title}
+                        </p>
+                        <ul className="flex flex-col  h-full w-full  items-center  text-gray-500  pr-2 text-xs md:text-sm">
                           {section.links &&
                             section.links.map((link, index) => (
-                              <li key={index} className="pb-3">
+                              <li
+                                key={index}
+                                className="w-[7.5rem] md:w-[8rem] pb-5 md:pb-3"
+                              >
                                 {link}
                               </li>
                             ))}
@@ -167,7 +177,7 @@ const Footer = () => {
                             section.info.map((info, index) => (
                               <li
                                 key={index}
-                                className="flex items-center  gap-2 pb-2"
+                                className="flex items-center  w-3/4 gap-2 pb-5"
                               >
                                 {section.icons && section.icons[index] && (
                                   <img
@@ -185,6 +195,7 @@ const Footer = () => {
                 )}
               </div>
             </div>
+
             <div className="xs:w-full h-3/4 bg-bgwhite"></div>
           </div>
         )}
