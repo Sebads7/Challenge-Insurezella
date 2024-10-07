@@ -62,7 +62,7 @@ const Home = () => {
         {/* SLIDER VIEW */}
         <InsuranceSlider />
 
-        <div className="flex flex-col lg:flex-row  lg:gap-4 xl:gap-20  w-full py-20 overflow-hidden">
+        <div className="flex flex-col lg:flex-row  lg:gap-4 xl:gap-20  w-full py-20 ">
           <div className="w-full lg:pl-8 flex  lg:items-start  lg:justify-end  scale-75 lg:scale-100 ">
             <img
               src="Assets/committed-help.png"
@@ -107,7 +107,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="w-full h-full xs:flex flex-col justify-center items-center  relative  bg-[#e9f5ff]/80 py-24 overflow-hidden ">
+      <section className="w-full h-full xs:flex flex-col justify-center items-center  relative  bg-[#e9f5ff]/80 py-24  ">
         <h2 className="text-center  text-2xl md:text-4xl lg:text-5xl font-bold xs:font-extrabold xs:w-[90%]">
           Pick the insurance that suits your needs.
         </h2>
@@ -139,7 +139,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="w-full   lg:flex flex-col justify-center items-center md:pt-20  md:px-10  xl:px-28 bg-[##f8f8f8] overflow-hidden">
+      <section className="w-full   lg:flex flex-col justify-center items-center md:pt-20  md:px-10  xl:px-28 bg-[##f8f8f8] \">
         <div className="flex flex-col  lg:flex-row w-full  ">
           {/* LEFT IMAGE  */}
           <div className=" flex md:justify-center lg:justify-end   w-full">

@@ -152,7 +152,7 @@ const Footer = () => {
                 {FOOTER_DATA.map(
                   (section, index) =>
                     (section.links || section.info) && (
-                      <div key={index} className=" md:px-10 ">
+                      <div key={index} className=" md:px-10 pt-2 ">
                         <p
                           className={`  ${
                             section.title === "Get In Touch"
@@ -162,12 +162,12 @@ const Footer = () => {
                         >
                           {section.title}
                         </p>
-                        <ul className="flex flex-col  h-full w-full  items-center  text-gray-500  pr-2 text-xs md:text-sm">
+                        <ul className="flex flex-col  h-full w-full  items-center  text-gray-500   pr-2 text-xs md:text-sm">
                           {section.links &&
                             section.links.map((link, index) => (
                               <li
                                 key={index}
-                                className="w-[7.5rem] md:w-[8rem] pb-5 md:pb-3"
+                                className="w-[7.5rem] md:w-[8rem] xs:pb-3 sm:pb-5 pb-5 md:pb-3"
                               >
                                 {link}
                               </li>
@@ -177,7 +177,7 @@ const Footer = () => {
                             section.info.map((info, index) => (
                               <li
                                 key={index}
-                                className="flex items-center  w-3/4 gap-2 pb-5"
+                                className="flex items-center  w-3/4  gap-2   pb-5"
                               >
                                 {section.icons && section.icons[index] && (
                                   <img

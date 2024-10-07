@@ -38,11 +38,11 @@ export const CompareItems = ({ plan }: { plan: Plan }) => {
         />
       </div>
       <ul className="md:pl-7 2xl:w-[90%] mx-auto px-4   z-10 ">
-        <li className="flex flex-col sm:pl-5 lg:px-10 lg:pr-24  gap-5  ">
+        <li className="flex flex-col sm:pl-2 lg:px-10 lg:pr-24  gap-5  ">
           <h3 className="md:text-xl  lg:text-3xl font-semibold pt-5  ">
             {plan.name}
           </h3>
-          <p className="text-gray-500 text-xs md:text-base xl:text-lg h-[4.5rem] sm:h-[6rem] md:h-28">
+          <p className="text-gray-500 text-xs md:text-base xl:text-lg h-[4.5rem] sm:h-[7rem] md:h-28">
             {plan.description}
           </p>
 
