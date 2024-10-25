@@ -2,7 +2,6 @@ This project is part of the A Teamwork challenge for Insurezella. The goal was t
 
 Features
 Responsive Design: Fully responsive for mobile, tablet, and desktop screens.
-Modal Functionality: Modals are used to enhance user experience.
 Mobile Slides: Slide functionality on mobile devices when pressing the dots.
 High Performance: Built with modern tools like Vite for fast performance and a smooth development environment.
 Technologies Used
