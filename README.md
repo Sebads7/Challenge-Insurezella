@@ -15,7 +15,7 @@ Vercel: Deployment platform used for production.
 Installation and Usage
 
 1)Clone the repository:
-git clone https://github.com/Sebads7/Challenge_A-Teamwork_Insurezella.git
+git clone https://github.com/Sebads7/Challenge-Insurezella.git
 2)Navigate to project directory
 cd Challenge_A-Teamwork_Insurezella
 3)install dependencies
