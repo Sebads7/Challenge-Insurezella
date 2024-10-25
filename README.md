@@ -24,4 +24,4 @@ npm install
 npm run dev
 
 Deployment
-The project is deployed on Vercel and can be accessed here: https://challenge-a-teamwork-insurezella-two.vercel.app/
+The project is deployed on Vercel and can be accessed here: https://challenge-insurezella.vercel.app/
